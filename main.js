@@ -1,16 +1,17 @@
 "use strict";
 
-document.getElementById("randNick").addEventListener("click", randomNickname);
+
 document.getElementById("allNick").addEventListener("click", allNickname);
 // Array
-let nickArray = ['ape', 'chimp', 'monkey', 'Im baby', 'brown face'];
+let nickArray = ['Ape', 'Chimp', 'Monkey', 'Im Baby', 'Brown Face'];
 //results
 let nickResult = document.getElementById('results');
-//get input
-let first = document.getElementById('firstName');
-let last = document.getElementById('lastName');
+
 function allNickname() {
+    let first = document.getElementById('firstName').value;
+    let last = document.getElementById('lastName').value;
+    
     for (let i = 0; i < nickArray.length; i++) {
-        nickResult.innerHTML += ""
+        nickResult.innerHTML += first + " " + nickArray[i] + " " + last + "<br>";
     }
 }
